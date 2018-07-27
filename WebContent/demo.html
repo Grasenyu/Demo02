@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="js/jquery.js" ></script>
+<script type="text/javascript">
+	
+	$(function(){
+		
+		
+		
+		$.ajax({
+			type:"get",
+			url:"http://pv.sohu.com/cityjson",
+			dataType:"jsonp",
+			success:function(returnCitySN ){
+				console.log(returnCitySN )
+				
+				var datas = JSON.parse(returnCitySN );
+				
+				alert(datas)
+				
+			}
+			
+		});
+		
+		
+		
+		
+	})
+	
+	
+</script>
+</head>
+
+
+<body>
+
+</body>
+</html>
